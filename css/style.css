@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #141414, #837977);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+
+  margin: 30px;
+  border: 2px solid gold;
+}
+
+body * {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+/* ************ */
+h1::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  /* background: linear-gradient(to right, #23074d, #cc5333); */
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+h1 {
+  position: relative;
+  font-size: 2.5rem;
+}
+
+h1:hover {
+  color: #2b0b4b;
+}
+
+/* ********************** */
+
+#myDog::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+#myDog:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#myDog::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+#myDog {
+  position: relative;
+  font-size: 1.3rem;
+}
+
+#myDog:hover {
+  color: #2b0b4b;
+}
+
+/* *********************** */
+header {
+  text-align: center;
+  margin: 2%;
+}
+header * {
+  padding: 1%;
+}
+
+header img {
+  height: 300px;
+  width: 400px;
+  border-radius: 20%;
+  box-shadow: 12px 12px 29px #555;
+}
+
+.woofWoof {
+  /* border: 2px solid red; */
+  text-align: center;
+  margin: 3% 15%;
+
+  word-wrap: break-word;
+  /* word-break: break-all; */
+}
+
+.whatIsYourAge {
+  /* border: 1px solid black; */
+  text-align: center;
+  margin: 5% 15%;
+  padding: 20px;
+}
+
+#button {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+input[type="text"],
+textarea {
+  background: #918e8e;
+  color: aliceblue;
+}
+
+input::placeholder {
+  color: rgb(71, 68, 68);
+}
+
+.hidden {
+  display: none;
+}
+
+.resultHere {
+  text-align: center;
+  margin: 3% 20%;
+  margin-right: 40px;
+  padding: 10px;
+  word-wrap: break-word;
+  /* border: 1px solid orange; */
+  background: linear-gradient(to right, #23074d, #cc5333);
+  border-radius: 20px;
+  box-shadow: 12px 12px 29px #555;
+}
+
+#button:hover {
+  color: #2b0b4b;
+  background-color: #cc5333;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  form {
+    display: table;
+    padding-left: 25%;
+  }
+
+  input,
+  label {
+    display: table-cell;
+  }
+
+  .tabel {
+    display: table-row;
+  }
+  .whatIsYourAge form * {
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+/* newChanges */
